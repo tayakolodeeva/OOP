@@ -34,18 +34,6 @@ public class DoublyLinkedList implements Iterable{
         return count;
     }
 
-    private Element getElement(int index){
-        if (index >= count){
-            throw new IndexOutOfBoundsException();
-        }
-
-        Element result = head;
-        for (int i = 1; i <= index; i++){
-            result = result.getNext();
-        }
-        return result;
-    }
-
     public Object get(int index){
 
         Element element = getElement(index);
@@ -125,6 +113,18 @@ public class DoublyLinkedList implements Iterable{
         tail.setNext(element);
         element.setPrevious(tail);
         tail = element;
+    }
+
+    private Element getElement(int index){
+        if (index >= count){
+            throw new IndexOutOfBoundsException();
+        }
+
+        Element result = head;
+        for (int i = 1; i <= index; i++){
+            result = result.getNext();
+        }
+        return result;
     }
     
 }

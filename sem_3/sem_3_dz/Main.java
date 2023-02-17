@@ -1,6 +1,6 @@
 package sem_3.sem_3_dz;
 
-import java.util.Iterator;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
